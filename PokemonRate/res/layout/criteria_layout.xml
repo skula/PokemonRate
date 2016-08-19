@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  <LinearLayout
     android:orientation="vertical"
     android:layout_width="fill_parent" 
     android:layout_height="fill_parent">
@@ -62,82 +66,167 @@
 			android:inputType="number"
 			android:layout_marginLeft="5dp"/>
 	</LinearLayout>
-	
+			
 	<Button android:id="@+id/criteria_btn_rate"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="5dp"
 		android:text="Evaluer !"/>
+	<TextView android:id="@+id/criteria_error"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="18dp"
+		android:textColor="#ff0000"/>
 		
 	<ImageView
 		android:id="@+id/stat_pokemon_pic"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content" 
+		android:layout_marginTop="15dp"
 		android:layout_gravity="center"/>
 	<TextView
 		android:id="@+id/stat_pokemon_level"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content" 
 		android:layout_gravity="center"
-		android:textSize="28dp"
+		android:textSize="25dp"
 		android:textColor="#333333"/>
 		
 	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_marginTop="15dp"
+		android:text="ATTACK + DEFENSE IV :"
+		android:layout_gravity="center"
+		android:textSize="28sp"
+		android:textColor="#333333"/>	
+	<TextView
 		android:id="@+id/stat_pokemon_attackDefenseIV"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content" />
+		android:layout_height="wrap_content" 
+		android:layout_gravity="center"
+		android:textSize="28dp"
+		android:textColor="#333333"/>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_gravity="center"
+		android:text="STAMINA IV :"
+		android:textSize="28dp"
+		android:textColor="#333333"/>	
 	<TextView
 		android:id="@+id/stat_pokemon_staminaIV"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content" />
-	
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:textSize="28dp"
+		android:textColor="#333333" />
 	
 	<LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
 		android:padding="5dp">
 		<LinearLayout
 			android:orientation="vertical"
-			android:layout_width="fill_parent" 
+			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content"
-			android:padding="5dp">
-			<TextView
-				android:id="@+id/stat_pokemon_rating_cp"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content" />
-			<TextView
-				android:id="@+id/stat_pokemon_per_diff_cp"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content" />
-		</LinearLayout>
-		<LinearLayout
-			android:orientation="vertical"
-			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content"
-			android:padding="5dp">
-			<TextView
-				android:id="@+id/stat_pokemon_rating_sta"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content" />
-			<TextView
-				android:id="@+id/stat_pokemon_per_diff_sta"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content" />
-		</LinearLayout>
-		<LinearLayout
-			android:orientation="vertical"
-			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content"
+			android:layout_weight="1"
 			android:padding="5dp">
 			<TextView
 				android:id="@+id/stat_pokemon_rating_br"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content" />
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:textSize="30dp"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:text="BATTLE RATING"
+				android:textSize="24dp"
+				android:textColor="#333333"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:text="ATTACK and DEFENSE"
+				android:layout_gravity="center"
+				android:textSize="18dp"
+				android:textColor="#333333"/>		
 			<TextView
 				android:id="@+id/stat_pokemon_per_diff_br"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content" />
+				android:layout_height="wrap_content"
+				android:layout_gravity="center" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:padding="5dp"
+			android:layout_weight="1">
+			<TextView
+				android:id="@+id/stat_pokemon_rating_cp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:textSize="30dp" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:text="CP RATING"
+				android:textSize="24dp"
+				android:textColor="#333333"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center" 
+				android:text="ALL STATS"
+				android:textSize="18dp"
+				android:textColor="#333333"/>	
+			<TextView
+				android:id="@+id/stat_pokemon_per_diff_cp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center" />
+		</LinearLayout>
+		
+			
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:padding="5dp"
+			android:layout_weight="1">
+			<TextView
+				android:id="@+id/stat_pokemon_rating_sta"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:textSize="30dp" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:text="HP RATING"
+				android:textSize="24dip"
+				android:textColor="#333333"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="STAMINA"
+				android:textSize="18dp"
+				android:textColor="#333333"/>	
+			<TextView
+				android:id="@+id/stat_pokemon_per_diff_sta"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center" />
 		</LinearLayout>
 	</LinearLayout>
 </LinearLayout>
+</ScrollView>

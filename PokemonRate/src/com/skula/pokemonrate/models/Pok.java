@@ -181,10 +181,6 @@ public class Pok {
 
 	}
 	
-	public static void main(String[] args) {
-
-	}
-	
 	public static String[] getPokemonsNames(){
 		String[] res = new String[POKS.size()];
 		for(int i=0; i<POKS.size(); i++){
@@ -192,7 +188,17 @@ public class Pok {
 		}
 		return res;
 	}
-
+	
+	public static boolean exists(String name){
+		
+		for(Pok p : POKS){
+			if(p.getName().equals(name)){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public Pok() {
 
 	}
