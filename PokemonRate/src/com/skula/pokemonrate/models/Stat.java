@@ -1,6 +1,7 @@
 package com.skula.pokemonrate.models;
 public class Stat {
 	private double level;
+	private int drawableId;
 	private double rating_cp;
 	private double rating_sta;
 	private double rating_br;
@@ -16,9 +17,10 @@ public class Stat {
 	public static void main(double[] args) {
 	}
 
-	public Stat(double level, double rating_cp, double rating_sta, double rating_br,
+	public Stat(double level, int drawableId, double rating_cp, double rating_sta, double rating_br,
 			double per_diff_cp, double per_diff_sta, double per_diff_br, int attackDefenceIV, int staminaIV, int cp, int cpMin, int cpMax) {
 		this.level = level;
+		this.drawableId = drawableId;
 		this.rating_cp = rating_cp;
 		this.rating_sta = rating_sta;
 		this.rating_br = rating_br;
@@ -38,6 +40,14 @@ public class Stat {
 
 	public void setLevel(double level) {
 		this.level = level;
+	}
+
+	public int getDrawableId() {
+		return drawableId;
+	}
+
+	public void setDrawableId(int drawableId) {
+		this.drawableId = drawableId;
 	}
 
 	public double getRating_cp() {

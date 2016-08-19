@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.skula.pokemonrate.R;
@@ -48,6 +49,8 @@ public class CriteriaActivity extends Activity {
 					try{
 					Stat s = Calculator.Calc(tmpName, Integer.parseInt(tmpTrainerLevel), Integer.parseInt(tmpCP), Integer.parseInt(tmpHP));
 					s.getAttackDefenceIV();
+					ImageView stat_pokemon_pic = (ImageView)findViewById(R.id.stat_pokemon_pic);
+					stat_pokemon_pic.setImageResource(s.getDrawableId());
 					TextView stat_pokemon_level = (TextView)findViewById(R.id.stat_pokemon_level);
 					stat_pokemon_level.setText("Niveau " + s.getLevel()+"");
 					TextView stat_pokemon_attackDefenseIV = (TextView)findViewById(R.id.stat_pokemon_attackDefenseIV);

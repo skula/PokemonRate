@@ -106,7 +106,7 @@ public class Calculator {
 		int attackDefenseIV = (int)Math.round((rating_br/100)*30);
 		int staminaIV = (int)Math.round((rating_sta/100)*15);
 		
-		return new Stat(pokLevel, round(rating_cp), round(rating_sta), round(rating_br), 
+		return new Stat(pokLevel, p.getDrawableId(), round(rating_cp), round(rating_sta), round(rating_br), 
 						round(per_diff_cp), round(per_diff_sta), round(per_diff_br), 
 						attackDefenseIV, staminaIV, 
 						userCP, min_cp, max_cp);		
