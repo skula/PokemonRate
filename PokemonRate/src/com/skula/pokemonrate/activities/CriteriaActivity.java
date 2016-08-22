@@ -43,7 +43,6 @@ public class CriteriaActivity extends Activity {
 		trainerLevel.setText("5");
 		pokemonCP.setText("154");
 		pokemonHP.setText("29");
-		//StatistiqueBarView plop = (StatistiqueBarView) findViewById(R.id.stat_pokemon_bar);
 		
 		this.btnRate = (Button) findViewById(R.id.criteria_btn_rate);
 		this.btnRate.setOnClickListener(new OnClickListener() {
@@ -62,6 +61,9 @@ public class CriteriaActivity extends Activity {
 						errorMsg.setVisibility(View.VISIBLE);
 						errorMsg.setText("Veuillez vérifier les paramètres");
 					}else{
+
+						StatistiqueBarView plop = (StatistiqueBarView) findViewById(R.id.pieCircle);
+						plop.setStatistique(s);
 						errorMsg.setVisibility(View.GONE);
 						ImageView stat_pokemon_pic = (ImageView)findViewById(R.id.stat_pokemon_pic);
 						stat_pokemon_pic.setImageResource(s.getDrawableId());

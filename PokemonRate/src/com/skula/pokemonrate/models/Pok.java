@@ -2,6 +2,9 @@ package com.skula.pokemonrate.models;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
 import com.skula.pokemonrate.R;
 import com.skula.pokemonrate.enums.PokClass;
 import com.skula.pokemonrate.enums.PokType;

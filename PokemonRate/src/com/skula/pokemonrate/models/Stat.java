@@ -114,6 +114,30 @@ public class Stat {
 		this.staminaIV = staminaIV;
 	}
 
+	public int getCp() {
+		return cp;
+	}
+
+	public void setCp(int cp) {
+		this.cp = cp;
+	}
+
+	public int getCpMin() {
+		return cpMin;
+	}
+
+	public void setCpMin(int cpMin) {
+		this.cpMin = cpMin;
+	}
+
+	public int getCpMax() {
+		return cpMax;
+	}
+
+	public void setCpMax(int cpMax) {
+		this.cpMax = cpMax;
+	}
+
 	@Override
 	public String toString() {
 		return "level: " + level +
